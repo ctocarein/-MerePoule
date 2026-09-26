@@ -1,0 +1,122 @@
+{
+  "v": 1,
+  "lecteur": "1.0",
+  "request_id": "0a1b2c3d-4e5f-4a6b-8c7d-9e0f1a2b3c4d",
+  "ts": "2026-09-25T21:05:40Z",
+  "account": 123456,
+  "days": 30,
+  "jump_late_min": 40,
+  "magic": 0,
+  "duration_ms": 5230,
+  "error": "",
+  "symbols": [
+    {
+      "symbol": "MAX PainX 2000",
+      "want": "sell",
+      "lot": 0.2,
+      "jumps": 3121,
+      "market": {
+        "trend": {
+          "n": 2566,
+          "wins": 1694,
+          "total": 9779.1
+        },
+        "jump": {
+          "n": 8210,
+          "wins": 5420,
+          "total": -3120.4
+        },
+        "both": {
+          "n": 2450,
+          "wins": 1630,
+          "total": 10230.5
+        },
+        "none": {
+          "n": 8633,
+          "wins": 5698,
+          "total": -14687.6
+        }
+      },
+      "robot": {
+        "trend": {
+          "n": 9,
+          "wins": 7,
+          "total": 168.2
+        },
+        "jump": {
+          "n": 21,
+          "wins": 14,
+          "total": -905.1
+        },
+        "both": {
+          "n": 8,
+          "wins": 6,
+          "total": 201.4
+        },
+        "none": {
+          "n": 24,
+          "wins": 15,
+          "total": -1318.0
+        }
+      },
+      "best": "both",
+      "best_by": "market"
+    },
+    {
+      "symbol": "MAX PainX 1000",
+      "want": "sell",
+      "lot": 0.2,
+      "jumps": 2544,
+      "market": {
+        "trend": {
+          "n": 2319,
+          "wins": 1484,
+          "total": -94.3
+        },
+        "jump": {
+          "n": 8230,
+          "wins": 5200,
+          "total": 2110.0
+        },
+        "both": {
+          "n": 2200,
+          "wins": 1400,
+          "total": 120.0
+        },
+        "none": {
+          "n": 8634,
+          "wins": 5440,
+          "total": -2820.7
+        }
+      },
+      "robot": {
+        "trend": {
+          "n": 5,
+          "wins": 3,
+          "total": -40.0
+        },
+        "jump": {
+          "n": 14,
+          "wins": 9,
+          "total": 210.3
+        },
+        "both": {
+          "n": 5,
+          "wins": 3,
+          "total": -40.0
+        },
+        "none": {
+          "n": 16,
+          "wins": 10,
+          "total": 150.3
+        }
+      },
+      "best": "jump",
+      "best_by": "market"
+    },
+    {
+      "symbol": "MAX GainX 7000",
+      "error": "historique des bougies indisponible"
+    }
+  ]
+}

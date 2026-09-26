@@ -1,0 +1,72 @@
+{
+  "v": 2,
+  "ts": "2026-09-24T13:46:57Z",
+  "account": 123456,
+  "label": "Richmond démo",
+  "watchdog": "1.34",
+  "state": "RUN",
+  "connected": true,
+  "algo_trading": true,
+  "equity": 10250.40,
+  "balance": 10480.00,
+  "floating": -229.60,
+  "margin_level": 812.5,
+  "margin_call_level": 100.0,
+  "stop_out_level": 50.0,
+  "stop_out_mode": "percent",
+  "day_open_balance": 10500.00,
+  "daily_dd_pct": 2.38,
+  "peak_equity": 10520.00,
+  "giveback_pct": 2.56,
+  "positions": 3,
+  "pending_orders": 1,
+  "symbols": [
+    { "symbol": "MAX PainX 2000", "positions": 3, "buy_volume": 0.00, "sell_volume": 0.60, "floating": -229.60 }
+  ],
+  "target_charts": 1,
+  "targets": [
+    { "expert": "PETIT POUSSIN 2.V377", "symbol": "MAX PainX 2000", "period": "M1", "inputs": { "InpParamL1": "0.2" } }
+  ],
+  "saved_charts": 1,
+  "saved_symbols": ["MAX PainX 2000"],
+  "robot_params": [
+    { "name": "InpParamL1", "label": "Lot", "min": 0.01, "max": 0.5 }
+  ],
+  "market": [
+    { "symbol": "MAX PainX 2000", "price": 120381.774, "chg_1h_pct": 0.62, "chg_4h_pct": 1.10, "chg_24h_pct": 2.35, "trend": "hausse", "volatility": "agite", "robot_side": "sell",
+      "want": "sell", "m5": "hausse", "m30": "hausse", "h1": "neutre", "rule": "interdit", "reversal": false,
+      "counter": false, "chg_60m_pct": 0.62, "trend_1h": "hausse",
+      "rule_mode": "trend", "jump_age_min": 12, "jump_late": false, "allowed": false }
+  ],
+  "chameleon": {
+    "mode": "observe", "pct": 25.0, "threshold": 110.00, "heavy_pct": 50.0, "heavy_threshold": 220.00,
+    "open": [ { "symbol": "MAX PainX 2000", "side": "sell", "since": "2026-09-24T13:40:02Z", "cut_result": -118.40, "positions": 3, "reason": "trend" } ],
+    "episodes": 2, "saved_total": -41.30,
+    "by_reason": { "trend": { "episodes": 1, "saved_total": -141.50 }, "heavy": { "episodes": 1, "saved_total": 100.20 }, "reversal": { "episodes": 0, "saved_total": 0.00 } }
+  },
+  "shield": { "active": true, "budget": 880.00, "groups": 1, "protected": 3, "unprotected": 0 },
+  "events_seq": 41,
+  "news": { "active": false, "label": null },
+  "last_kill": { "at": null, "reason": null, "request_id": null },
+  "config": {
+    "source": "local",
+    "remote_allowed": true,
+    "margin_level_min": 500.0,
+    "margin_action": "alert",
+    "max_floating_loss": 440.00,
+    "manual_decision": false,
+    "floating_last_resort": 440.00,
+    "max_daily_dd_pct": 5.00,
+    "max_giveback_pct": 20.00,
+    "news_currencies": "",
+    "magic": 0,
+    "jump_late_min": 40,
+    "caps": {
+      "margin_level_min": 250.0,
+      "margin_action_alert": true,
+      "max_floating_loss": 880.00,
+      "max_daily_dd_pct": 10.00,
+      "max_giveback_pct": 40.00
+    }
+  }
+}

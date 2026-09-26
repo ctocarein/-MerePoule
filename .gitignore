@@ -1,0 +1,23 @@
+# Programmes compilés et fichiers propres à la machine : jamais dans le dépôt.
+*.exe
+*.ex5
+*.log
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.tmp
+__pycache__/
+*.pyc
+
+# Secrets : ils vivent hors du dépôt (MQL5\Presets de MT5 et
+# %LOCALAPPDATA%\MerePoule\gateway), jamais ici.
+*.set
+*.token
+deadman.url
+readiness.last
+.env
+
+# Éditeurs
+.vscode/
+.idea/
