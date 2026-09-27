@@ -147,12 +147,14 @@ func (b *Bot) Run(ctx context.Context) {
 		{"command": "appel", "description": "Appel d'alerte : qui est appelé, test, off / on"},
 		{"command": "regles", "description": "La règle de chaque symbole : tendance, saut, les deux ou aucune"},
 		{"command": "comparatif", "description": "Ce qu'aurait donné chaque règle sur 30 jours"},
+		{"command": "retrait", "description": "Ce qui dépasse le capital de travail, à retirer"},
 		{"command": "pret", "description": "L'ordinateur peut-il veiller 24 h sur 24 ?"},
 	}})
 	go b.watchLoop(ctx)
 	go b.actusLoop(ctx)
 	go b.preAlertLoop(ctx)
 	go b.comparatifLoop(ctx)
+	go b.retraitLoop(ctx)
 	if ups, err := b.getUpdates(ctx, -1, 0); err == nil && len(ups) > 0 {
 		b.offset = ups[len(ups)-1].UpdateID + 1
 	}
@@ -239,6 +241,8 @@ func (b *Bot) onMessage(ctx context.Context, m *message) {
 		b.comparatifCommand(ctx, chat, fields[1:])
 	case "/etat", "/status":
 		b.status(ctx, chat)
+	case "/retrait", "/retraits", "/gains":
+		b.retraitCommand(ctx, chat, fields[1:])
 	case "/pret", "/ready":
 		b.send(ctx, chat, ReadinessMessage(readiness.Run()), nil)
 	default:
@@ -257,6 +261,7 @@ func (b *Bot) help(ctx context.Context, chat int64) {
 		"/appel : l'appel d'alerte quand la perte en cours atteint -300 (test, off / on)\n"+
 		"/regles : la règle de chaque symbole (tendance, saut, les deux ou aucune), et la changer\n"+
 		"/comparatif : ce qu'aurait donné chaque règle sur 30 jours ; publié chaque jour à 21:05 GMT\n"+
+		"/retrait : ce qui dépasse ton capital de travail, à retirer ; publié chaque dimanche à 18:00 GMT (/retrait capital 1000 pour le fixer)\n"+
 		"/pret : l'ordinateur peut-il veiller 24 h sur 24 ?\n"+
 		"<i>Plusieurs comptes : ajouter le numéro, ex. /kill 43204264.</i>\n\n"+
 		"<i>Seuils et réglages du robot : depuis l'app seulement.</i>", nil)

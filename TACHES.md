@@ -68,6 +68,16 @@ déroulant des comptes) sur trois comptes de démonstration, icône de l'app,
 app en français.
 | 20 | Essai complet sur ton téléphone : STOP exécuté et confirmé, push reçus | Toi | Critère de sortie |
 
+## Retrait du dimanche (décision 31)
+
+| # | Tâche | Qui | État |
+| --- | --- | --- | --- |
+| 29 | Fixer le capital de travail de chaque compte : `/retrait capital 1000` (ton montant) | Toi | À faire |
+| 30 | Vérifier dans l'espace client Weltrade les réseaux USDT proposés et la règle « retrait vers le moyen du dépôt » ; même réseau côté Binance | Toi | À faire |
+| 31 | Premier retrait réel : noter frais et délai, pour caler le minimum de 10 | Toi | Au réel |
+
+Fait : `/retrait` sur Telegram, point publié chaque dimanche à 18:00 GMT.
+
 ## Décisions à prendre
 
 | # | Question | Pour quand |

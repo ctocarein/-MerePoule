@@ -85,6 +85,7 @@ Commandes du bot, dans le menu « / » de Telegram :
 | `/actus` | L'Actus du marché tout de suite : météo de chaque symbole en mots simples, état du robot. Publiée d'office à chaque heure pile et demi-heure ; `/actus off` la coupe pour ce chat, `/actus on` la reprend |
 | `/regles` | La règle de chaque symbole (tendance, saut, les deux ou aucune) et son verdict ; « Changer » puis la règle voulue : la Mère l'applique (`rules.flag`, Watchdog 1.34) |
 | `/comparatif` | Demande au Lecteur (service MT5) ce qu'aurait donné chaque règle sur 30 jours, marché et vrais trades, symbole par symbole ; un bouton par symbole dont la meilleure règle n'est pas la sienne. Publié d'office chaque jour à 21:05 GMT |
+| `/retrait` | Ce qui dépasse le capital de travail, à retirer en USDT vers Binance ; `/retrait capital 1000 [compte]` le fixe, `/retrait off` / `on`. Publié d'office chaque dimanche à 18:00 GMT (décision 31) |
 | `/pret` | Diagnostic « Prêt pour le 24 h », en langage simple : ce qui se passe, que faire, la commande pour les initiés à part |
 
 Avec plusieurs comptes, ajouter le numéro : `/kill 43204264`. Pas de PIN
@@ -124,7 +125,7 @@ Un paquet par module de l'architecture, sous `internal/` :
 | `store` | SQLite : appareils, codes, échecs de PIN, copie du journal, demandes (audit), échantillons | Fait |
 | `history` | Solde et equity chaque minute ; courbes 24 h, 7 j, 30 j ; résultats par jour et par semaine ; marqueurs | Fait |
 | `readiness` | Diagnostic « Prêt pour le 24 h » : veille, alimentation, Windows Update, connexion automatique, lancement de MT5 et de la passerelle | Fait |
-| `telegram` | Canal de secours : `/kill` et `/relancer` avec bouton de confirmation, attente du marché et go-to-market, `/go`, `/annuler`, `/etat` avec le marché, `/actus` (Actus du marché toutes les 30 min), `/appel` (pré-alerte à −300 et appel vocal), `/regles` et `/comparatif` (règle par symbole, décision 30), `/pret`, chats autorisés par compte | Fait |
+| `telegram` | Canal de secours : `/kill` et `/relancer` avec bouton de confirmation, attente du marché et go-to-market, `/go`, `/annuler`, `/etat` avec le marché, `/actus` (Actus du marché toutes les 30 min), `/appel` (pré-alerte à −300 et appel vocal), `/regles` et `/comparatif` (règle par symbole, décision 30), `/retrait` (décision 31), `/pret`, chats autorisés par compte | Fait |
 | `call` | Appel vocal Telegram par CallMeBot, pour la pré-alerte | Fait |
 | `notify` | Vigie : « Watchdog muet » après 90 s sans statut, puis « de retour », sur Telegram ; push Firebase à venir | Fait (Telegram) |
 | `deadman` | Signal de vie chaque minute, `/fail` quand un Watchdog est muet ou qu'aucun n'est lu | Fait, attend l'adresse |

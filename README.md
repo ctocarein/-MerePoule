@@ -37,7 +37,7 @@ Ce qui reste à faire, et qui le fait : `TACHES.md`.
 
 ## Décisions
 
-Détail et conséquences dans l'architecture, décisions 8 à 30 :
+Détail et conséquences dans l'architecture, décisions 8 à 31 :
 
 - Canal de secours : `/kill` sur le bot Telegram, et `/relancer` après un
   arrêt (décision 18).
@@ -82,6 +82,9 @@ Détail et conséquences dans l'architecture, décisions 8 à 30 :
   Lecteur compare les 4 sur 30 jours, et tu choisis par un bouton.
 - Pause en contre-tendance plutôt que coupe : positions gardées, robot
   rallumé quand la règle repasse au 🟢 ; marché lu sur 1 h.
+- Retrait du dimanche : un capital de travail par compte ; chaque dimanche
+  à 18:00 GMT, `/retrait` dit ce qui le dépasse, à retirer en USDT vers
+  Binance. Le compte revient au même capital, les seuils restent justes.
 
 Reste à trancher : la source des annonces du courtier, le calendrier
 économique dans l'app pour le Forex, et le calendrier du mode produit
